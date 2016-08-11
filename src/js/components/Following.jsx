@@ -33,7 +33,7 @@ var Following = React.createClass({
         // }
         
         return (
-            <Infinite isInfiniteLoading={this.state.loading} onInfiniteLoad={this.fetchData} useWindowAsScrollContainer={true} elementHeight={50} infiniteLoadBeginEdgeOffset={100}>
+            <Infinite isInfiniteLoading={this.state.loading} onInfiniteLoad={this.fetchData} useWindowAsScrollContainer={true} elementHeight={50} infiniteLoadBeginEdgeOffset={100} loadingSpinnerDelegate={<div>LOADING</div>}>
                 <div className="following-page">
                     <h2>Following of {this.props.params.username}</h2>
                     <ul>

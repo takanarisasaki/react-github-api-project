@@ -31,6 +31,11 @@ var Followers = React.createClass({
         });
         
     },
+    elementInfiniteLoad: function() {
+        return <div className="infinite-list-item">
+            Loading...
+        </div>;
+    },
     render: function() {
         //console.log("FOLLOWERS", this.state.followers);
         // console.log("LOADING", this.state.loading);
@@ -40,7 +45,7 @@ var Followers = React.createClass({
         //     return <div>LOADING FOLLOWERS...</div>
         // }
         return (
-            <Infinite isInfiniteLoading={this.state.loading} onInfiniteLoad={this.fetchData} useWindowAsScrollContainer={true} elementHeight={50} infiniteLoadBeginEdgeOffset={100}>
+            <Infinite isInfiniteLoading={this.state.loading} onInfiniteLoad={this.fetchData} useWindowAsScrollContainer={true} elementHeight={50} infiniteLoadBeginEdgeOffset={100} loadingSpinnerDelegate={<div>LOADING</div>}>
             
                 <div className="followers-page">
                     <h2>Followers of {this.props.params.username}</h2>
