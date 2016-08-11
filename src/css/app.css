@@ -105,3 +105,54 @@ h1,h2,h3,h4,h5,h6 {
     margin: 0;
     white-space: nowrap;
 }
+
+
+.avatar_url {
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    border: 2px black solid;
+
+}
+
+.followers_username {
+    display: flex;
+    padding: 0px 0px 0px 10px; 
+}
+
+.all_avatar {
+    display: flex;
+}
+
+.all_avatar_link {
+    display: flex;
+    padding: 3px 0px 3px 0px;
+    text-decoration: none;
+    color: black;
+    margin: 0px;
+    
+    /*border: 2px black solid;*/
+}
+
+.followers-page, .following-page, .repository-page {
+    margin-right: 10000px;
+}
+
+
+.repository_link {
+    padding-top: 15px;
+    padding-right: 6px;
+    text-decoration: none;
+    color: black;
+    display: flex;
+}
+
+.repository_login {
+    padding-right: 8px;
+}
+
+
+.num_stars {
+    border: 2px solid black;
+}
+
