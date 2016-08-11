@@ -40,15 +40,14 @@ var User = React.createClass({
             );
     },
     componentDidUpdate: function(prevProps) {
-        if (prevProps) {
-            if (prevProps.username !== this.props.params.username) {
+        if (prevProps.params.username) {
+            if (prevProps.params.username !== this.props.params.username) {
                 this.fetchData();
             }        
         }
     },
     componentDidMount: function() {
         this.fetchData();
-        this.componentDidUpdate();
     },
     /*
     This method is used as a mapping function. Eventually this could be factored out to its own component.
